@@ -44,7 +44,7 @@
     <string name="map_option_search">Search</string>
     <string name="main_option_findroute">My Routes</string>
     <string name="main_option_findstop">My Stops</string>
-    <string name="main_option_viewtrips">View Reminders</string>
+    <string name="main_option_alert">Destination Alert</string><string name="main_option_viewtrips">View Reminders</string>
     <string name="main_option_help">Help</string>
     <string name="main_arrival_info">Show arrivals</string>
     <string name="main_show_routes">Show routes</string>
@@ -189,5 +189,6 @@
     <string name="preferences_oba_api_servername_title">OneBusAway API Server</string>
     <string name="preferences_oba_api_servername_summary">Determines the server name used in OneBusAway API calls</string>
     <string name="preferences_oba_api_servername_default">api.onebusaway.org</string>
+    
 
 </resources>

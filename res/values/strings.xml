@@ -189,6 +189,7 @@
     <string name="preferences_oba_api_servername_title">OneBusAway API Server</string>
     <string name="preferences_oba_api_servername_summary">Determines the server name used in OneBusAway API calls</string>
     <string name="preferences_oba_api_servername_default">api.onebusaway.org</string>
+    <string name="my_no_alert">You have not set any alerts</string>
     
     
     

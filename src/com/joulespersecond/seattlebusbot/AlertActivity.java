@@ -33,22 +33,23 @@ public class AlertActivity extends MyTabActivityBase {
         bar.setDisplayOptions(0, ActionBar.DISPLAY_SHOW_TITLE);
 
         bar.addTab(bar.newTab()
-                .setTag(MyRecentRoutesFragment.TAB_NAME)
+                .setTag(MySearchRoutesFragment.TAB_NAME)
                 .setText(res.getString(R.string.my_set_alert))
                 .setIcon(res.getDrawable(R.drawable.ic_tab_search))
-                .setTabListener(new TabListener<MyRecentRoutesFragment>(
-                        this,
-                        MyRecentRoutesFragment.TAB_NAME,
-                        MyRecentRoutesFragment.class)));
-        bar.addTab(bar.newTab()
-                .setTag(MySearchRoutesFragment.TAB_NAME)
-                .setText(res.getString(R.string.my_view_alert))
-                .setIcon(res.getDrawable(R.drawable.ic_tab_recent))
                 .setTabListener(new TabListener<MySearchRoutesFragment>(
                         this,
                         MySearchRoutesFragment.TAB_NAME,
                         MySearchRoutesFragment.class)));
-
+        bar.addTab(bar.newTab()
+                .setTag(MyRecentRoutesFragment.TAB_NAME)
+                .setText(res.getString(R.string.my_view_alert))
+                .setIcon(res.getDrawable(R.drawable.ic_tab_recent))
+                .setTabListener(new TabListener<MyRecentAlertFragment>(
+                        this,
+                        MyRecentAlertFragment.TAB_NAME,
+                        MyRecentAlertFragment.class)));
+        
+        
         restoreDefaultTab();
     }
 

@@ -129,7 +129,7 @@
     <string name="my_context_show_schedule">Show schedule</string>
 
     <!-- Find -->
-    <string name="find_hint_nofavoritestops">Find a stop by entering its stop number in the search box.\n\n</string>
+    <string name="my_set_alert">Set Alerts</string><string name="my_view_alert">View Alerts</string><string name="find_hint_nofavoritestops">Find a stop by entering its stop number in the search box.\n\n</string>
     <string name="find_hint_nofavoriteroutes">Find a route by entering its route name or number in the search box.</string>
     <string name="find_hint_nofavoritestops_link">What\'s a stop number?</string>
     <string name="find_hint_noresults">There are no results that match your search.</string>
@@ -189,6 +189,8 @@
     <string name="preferences_oba_api_servername_title">OneBusAway API Server</string>
     <string name="preferences_oba_api_servername_summary">Determines the server name used in OneBusAway API calls</string>
     <string name="preferences_oba_api_servername_default">api.onebusaway.org</string>
+    
+    
     
 
 </resources>

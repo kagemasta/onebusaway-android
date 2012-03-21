@@ -182,6 +182,10 @@ public class HomeActivity extends FragmentMapActivity {
         } else if (id == R.id.help) {
             new HelpDialog().show(getSupportFragmentManager(), TAG_HELP_DIALOG);
             return true;
+        } else if (id == R.id.alert) {
+            Intent myIntent = new Intent(this, AlertActivity.class);
+            startActivity(myIntent);
+            return true;
         }
         return false;
     }

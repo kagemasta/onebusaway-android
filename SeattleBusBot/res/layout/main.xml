@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2010 Paul Watts (paulcwatts@gmail.com)
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainlayout"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.google.android.maps.MapView
+        android:id="@+id/mapview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true"
+        android:apiKey="@string/apiKey"
+        android:focusableInTouchMode="true"
+    />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/route_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+                <include layout="@layout/route_info_head" />
+        </LinearLayout><!-- ROUTE MODE -->
+
+        <!-- STOP INFO -->
+        <LinearLayout
+            android:id="@+id/stop_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/stop_popup_bg"
+            android:visibility="gone">
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5sp">
+                <TextView
+                        android:id="@+id/stop_name"
+                        style="@style/HeaderText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="3" />
+                <TextView android:id="@+id/direction"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!--  STOP LINKS -->
+            <LinearLayout
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+               <Button
+                    android:id="@+id/show_arrival_info"
+                    android:text="@string/main_arrival_info"
+                    style="@style/HeaderLink"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+               <Button
+                    android:id="@+id/show_routes"
+                    android:text="@string/main_show_routes"
+                    style="@style/HeaderLink"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <GridView
+                android:id="@+id/route_list"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="auto_fit"
+                android:columnWidth="@dimen/route_button_width"
+                android:padding="0dip"
+                android:verticalSpacing="0dp"
+                android:horizontalSpacing="0dp" />
+        </LinearLayout><!-- STOP INFO -->
+    </LinearLayout><!--  POPUP CONTAINER -->
+
+    <ZoomControls android:id="@+id/zoom_controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>
+
